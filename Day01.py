@@ -5,23 +5,22 @@ pattern = r"[^0-9]"
 
 result = 0
 
-numbers = [
-    {r"(?<=o)n(?=e)": "1"},
-    {r"(?<=t)w(?=o)": "2"},
-    {r"(?<=t)hre(?=e)": "3"},
-    {r"(?<=f)ou(?=r)": "4"},
-    {r"(?<=f)iv(?=e)": "5"},
-    {r"(?<=s)i(?=x)": "6"},
-    {r"(?<=s)eve(?=n)": "7"},
-    {r"(?<=e)igh(?=t)": "8"},
-    {r"(?<=n)in(?=e)": "9"}
-]
+numbers = {
+    r"(?<=o)n(?=e)": "1",
+    r"(?<=t)w(?=o)": "2",
+    r"(?<=t)hre(?=e)": "3",
+    r"(?<=f)ou(?=r)": "4",
+    r"(?<=f)iv(?=e)": "5",
+    r"(?<=s)i(?=x)": "6",
+    r"(?<=s)eve(?=n)": "7",
+    r"(?<=e)igh(?=t)": "8",
+    r"(?<=n)in(?=e)": "9"
+}
 
 
 def changeNumber(line: str):
-    for number in numbers:
-        for key, value in number.items():
-            line = re.sub(key, value, line)
+    for key, value in number.items():
+        line = re.sub(key, value, line)
     return line
 
 
