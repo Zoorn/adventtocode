@@ -19,7 +19,7 @@ numbers = {
 
 
 def changeNumber(line: str):
-    for key, value in number.items():
+    for key, value in numbers.items():
         line = re.sub(key, value, line)
     return line
 
